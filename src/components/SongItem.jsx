@@ -1,4 +1,5 @@
 import React from 'react';
+import MusicPlayer from './MusicPlayer';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 export default class SongItem extends React.Component {
@@ -41,7 +42,7 @@ export default class SongItem extends React.Component {
           showExpandableButton
         />
         <CardText expandable>
-          {this.props.songUrl}
+          <MusicPlayer songUrl={this.props.songUrl} />
         </CardText>
       </Card>
     );
