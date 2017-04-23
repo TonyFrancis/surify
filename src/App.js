@@ -12,6 +12,8 @@ import activityStore from './store';
 const store = createStore(activityStore);
 
 injectTapEventPlugin();
+
+// NotFound Class for invalid routing.
 const NotFound = () => (
   <div>
     <h1>Sorry You Cannot Access This Page</h1>

@@ -1,3 +1,4 @@
+// reducers function for activity
 
 function activityStore(state = [], action) {
   switch (action.type) {

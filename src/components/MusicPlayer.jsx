@@ -2,13 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class MusicPlayer extends React.Component {
+  // Custom Music Player with Play, Pause and download function.
   constructor(props) {
     super(props);
     this.state = {
-      play: false
+      play: false,
     };
   }
   componentWillUnMount() {
+    // destorying reference on Exist
     this.audio = null;
   }
   render() {

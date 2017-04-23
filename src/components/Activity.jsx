@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { Card, CardHeader } from 'material-ui/Card';
 
 class Activity extends React.Component {
+  // linked with Store.
   render() {
     return (
       <div>

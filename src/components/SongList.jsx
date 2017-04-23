@@ -7,6 +7,8 @@ import API_URL from '../urls';
 import SongItem from './SongItem';
 
 export default class SongList extends React.Component {
+  // Listing Page for all the songs.
+
   constructor(props) {
     super(props);
     this.state = {
@@ -16,6 +18,7 @@ export default class SongList extends React.Component {
     };
   }
   componentWillMount() {
+    // Getting the songs for web server.
     this.setState({ loader: true });
     getApi(API_URL.songList, {}, (res) => {
       this.setState({ list: res, loader: false });

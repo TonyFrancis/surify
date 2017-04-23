@@ -21,6 +21,9 @@ npm start
 
 Application starts on localhost:3000
 
+## ScreenShots
+
+ScreenShots are in `/screenshots`  directory
 
 ## About Me
 

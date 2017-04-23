@@ -3,6 +3,8 @@ import { Card, CardHeader, CardText } from 'material-ui/Card';
 import MusicPlayer from './MusicPlayer';
 
 export default class SongItem extends React.Component {
+  // Each content should be different entity so it is easy to control
+  // Song element
   constructor(props) {
     super(props);
     this.handleOpen = this.handleOpen.bind(this);
@@ -12,6 +14,7 @@ export default class SongItem extends React.Component {
       open: false,
     };
   }
+  // Handling open and close function of the card.
   handleOpen() {
     this.setState({ open: true });
   }
