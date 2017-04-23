@@ -2,7 +2,7 @@ import React from 'react';
 import CircularProgress from 'material-ui/CircularProgress';
 import { getApi } from '../commons';
 import API_URL from '../urls';
-// import SongItem from './SongItem';
+import SongItem from './SongItem';
 
 export default class SongList extends React.Component {
   constructor(props) {
@@ -27,10 +27,13 @@ export default class SongList extends React.Component {
     return (
       <div>
         {this.state.list.map((elem, index) =>
-          <li key={index}>
-            {elem.song}
-          </li>
-        )}
+          <SongItem
+            key={index}
+            song={elem.song}
+            avatar={elem.cover_image}
+            artists={elem.artists}
+            songUrl={elem.url}
+          /> )}
       </div>
     );
   }
