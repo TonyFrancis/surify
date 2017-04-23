@@ -1,6 +1,6 @@
 import React from 'react';
+import { Card, CardHeader, CardText } from 'material-ui/Card';
 import MusicPlayer from './MusicPlayer';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 export default class SongItem extends React.Component {
   constructor(props) {
@@ -22,16 +22,6 @@ export default class SongItem extends React.Component {
     this.setState({ open: value });
   }
   render() {
-    const song = [
-      {
-        url: this.props.songUrl,
-        cover: this.props.avatar,
-        artist: {
-          name: this.props.artists,
-          song: this.props.song,
-        },
-      },
-    ];
     return (
       <Card expanded={this.state.open} onExpandChange={this.handleChange}>
         <CardHeader
@@ -42,7 +32,10 @@ export default class SongItem extends React.Component {
           showExpandableButton
         />
         <CardText expandable>
-          <MusicPlayer songUrl={this.props.songUrl} />
+          <MusicPlayer
+            songUrl={this.props.songUrl}
+            song={this.props.song}
+          />
         </CardText>
       </Card>
     );

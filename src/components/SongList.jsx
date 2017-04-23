@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import CircularProgress from 'material-ui/CircularProgress';
 import TextField from 'material-ui/TextField';
 import { getApi } from '../commons';
@@ -28,6 +29,8 @@ export default class SongList extends React.Component {
     }
     return (
       <div>
+        <Link to="/activity">Activity</Link>
+        <br />
         <TextField
           floatingLabelText="Song"
           onChange={(_, value) => this.setState({ songName: value })}
